@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fundacja Biegusiem – wspieramy aktywność, ruch i radość dzieci oraz całych rodzin. Dołącz do nas!" />
+  <meta name="theme-color" content="#ECB0B0" />
+  <title>Fundacja Biegusiem – Razem w ruchu!</title>
+
+  <!-- Outfit z Google Fonts (nagłówki) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Ikony Heroicons via CDN (lekkie SVG) -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Przejdź do treści</a>
+
+  <!-- ============================================================
+       NAWIGACJA
+  ============================================================ -->
+  <header class="site-header" id="site-header" role="banner">
+    <nav class="nav container" aria-label="Nawigacja główna">
+
+      <a href="#hero" class="nav__logo" aria-label="Fundacja Biegusiem – strona główna">
+        <img
+          src="Pełna księga znaku Fundacja Biegusiem/Pliki/PNG/Wersja podstawowa dla białego tła.png"
+          alt="Fundacja Biegusiem – logo"
+          class="nav__logo-img"
+          width="180"
+          height="auto"
+        />
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Otwórz menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu" role="list">
+        <li><a href="#o-nas"    class="nav__link">O nas</a></li>
+        <li><a href="#misja"    class="nav__link">Misja</a></li>
+        <li><a href="#dzialania" class="nav__link">Działania</a></li>
+        <li><a href="#liczby"   class="nav__link">Liczby</a></li>
+        <li><a href="#aktualnosci" class="nav__link">Aktualności</a></li>
+        <li><a href="#kontakt"  class="nav__link">Kontakt</a></li>
+        <li>
+          <a href="#wesprzej" class="nav__link nav__link--cta">Wesprzyj nas</a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="hero" aria-label="Sekcja główna">
+
+      <!-- Dekoracyjne koła w tle (z sygnetu brandowego) -->
+      <div class="hero__bg-circles" aria-hidden="true">
+        <span class="hero__circle hero__circle--pink"></span>
+        <span class="hero__circle hero__circle--blue"></span>
+        <span class="hero__circle hero__circle--sm-pink"></span>
+        <span class="hero__circle hero__circle--sm-blue"></span>
+      </div>
+
+      <div class="container hero__content">
+        <div class="hero__text">
+          <p class="hero__eyebrow">Fundacja Biegusiem</p>
+          <h1 class="hero__heading">
+            Razem<br />
+            <em class="hero__heading-em">w&nbsp;ruchu!</em>
+          </h1>
+          <p class="hero__lead">
+            Wierzymy, że ruch to radość. Wspieramy dzieci, rodziny i społeczności
+            w odkrywaniu aktywnego stylu życia — krok po kroku, bieg po biegu.
+          </p>
+          <div class="hero__actions">
+            <a href="#wesprzej" class="btn btn--primary">Wesprzyj fundację</a>
+            <a href="#o-nas"    class="btn btn--ghost">Dowiedz się więcej</a>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__logo-wrap">
+            <img
+              src="Pełna księga znaku Fundacja Biegusiem/Pliki/PNG/Wersja pionowa dla białego tła.png"
+              alt=""
+              class="hero__logo-img"
+              width="340"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+      </div>
+
+    </section>
+
+    <!-- ============================================================
+         O NAS
+    ============================================================ -->
+    <section class="section o-nas" id="o-nas" aria-labelledby="o-nas-heading">
+      <div class="container">
+
+        <div class="section__header section__header--center">
+          <span class="section__tag">Kim jesteśmy</span>
+          <h2 class="section__heading" id="o-nas-heading">
+            Fundacja Biegusiem
+          </h2>
+          <p class="section__lead">
+            Jesteśmy organizacją non-profit, która od lat łączy ludzi poprzez sport i aktywność fizyczną.
+            Nasze serce bije dla dzieci i rodzin, które chcą razem odkrywać radość z ruchu.
+          </p>
+        </div>
+
+        <div class="o-nas__grid">
+
+          <div class="o-nas__card reveal">
+            <div class="o-nas__card-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h3 class="o-nas__card-title">Pasja do ruchu</h3>
+            <p class="o-nas__card-text">
+              Sport to nie tylko zdrowie — to wspólnota, przyjaźń i radość. Tworzymy przestrzeń,
+              w której każdy może znaleźć swoje tempo i czerpać z aktywności pełnymi garściami.
+            </p>
+          </div>
+
+          <div class="o-nas__card reveal">
+            <div class="o-nas__card-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="o-nas__card-title">Razem silniejsi</h3>
+            <p class="o-nas__card-text">
+              Budujemy lokalną społeczność aktywnych ludzi. Organizujemy bieganki, warsztaty
+              i wspólne treningi, które łączą pokolenia i tworzą prawdziwe przyjaźnie.
+            </p>
+          </div>
+
+          <div class="o-nas__card reveal">
+            <div class="o-nas__card-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="o-nas__card-title">Od 2019 roku</h3>
+            <p class="o-nas__card-text">
+              Fundacja działa nieprzerwanie od 2019 roku. W tym czasie zorganizowaliśmy setki
+              wydarzeń i dotarliśmy do tysięcy dzieci i dorosłych w całej Polsce.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MISJA
+    ============================================================ -->
+    <section class="section misja" id="misja" aria-labelledby="misja-heading">
+      <div class="container">
+
+        <div class="misja__layout">
+
+          <div class="misja__content reveal">
+            <span class="section__tag">Nasza misja</span>
+            <h2 class="section__heading" id="misja-heading">
+              Ruch jako<br />prawo każdego&nbsp;dziecka
+            </h2>
+            <p class="misja__text">
+              Wierzymy, że dostęp do aktywnego stylu życia to nie przywilej — to prawo.
+              Dlatego działamy tam, gdzie jest największa potrzeba: w szkołach, świetlicach,
+              parkach i na ulicach. Fundacja Biegusiem tworzy programy, które są dostępne
+              dla wszystkich — niezależnie od możliwości finansowych rodziny.
+            </p>
+            <p class="misja__text">
+              Nasze działania opierają się na trzech filarach: <strong>edukacji ruchowej</strong>,
+              <strong>integracji społecznej</strong> i <strong>promocji zdrowego stylu życia</strong>.
+              Wszystko to robimy z radością, energią i sercem.
+            </p>
+            <a href="#dzialania" class="btn btn--primary">Poznaj nasze działania</a>
+          </div>
+
+          <div class="misja__visual reveal" aria-hidden="true">
+            <div class="misja__blob">
+              <div class="misja__blob-inner">
+                <img
+                  src="Pełna księga znaku Fundacja Biegusiem/Pliki/PNG/Sygnet - kolor.png"
+                  alt=""
+                  class="misja__sygnet"
+                  width="200"
+                />
+              </div>
+              <!-- Floating tags -->
+              <div class="misja__tag misja__tag--1">🏃 Ruch to radość</div>
+              <div class="misja__tag misja__tag--2">💙 Dla każdego</div>
+              <div class="misja__tag misja__tag--3">🌿 Razem silniejsi</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         DZIAŁANIA
+    ============================================================ -->
+    <section class="section dzialania" id="dzialania" aria-labelledby="dzialania-heading">
+      <div class="container">
+
+        <div class="section__header section__header--center">
+          <span class="section__tag">Co robimy</span>
+          <h2 class="section__heading" id="dzialania-heading">Nasze działania</h2>
+          <p class="section__lead">
+            Każde z naszych działań ma jeden cel — sprawić, żeby ruch był radością, a nie obowiązkiem.
+          </p>
+        </div>
+
+        <div class="dzialania__grid">
+
+          <article class="dzialania__item reveal">
+            <div class="dzialania__item-bg dzialania__item-bg--pink"></div>
+            <div class="dzialania__item-content">
+              <span class="dzialania__item-emoji" aria-hidden="true">🏅</span>
+              <h3 class="dzialania__item-title">Biegi i zawody</h3>
+              <p class="dzialania__item-text">
+                Organizujemy biegi rodzinne, zawody dla dzieci i aktywne pikniki sportowe.
+                Liczy się udział, radość i wspólna meta — nie wynik.
+              </p>
+            </div>
+          </article>
+
+          <article class="dzialania__item reveal">
+            <div class="dzialania__item-bg dzialania__item-bg--blue"></div>
+            <div class="dzialania__item-content">
+              <span class="dzialania__item-emoji" aria-hidden="true">🎒</span>
+              <h3 class="dzialania__item-title">Programy szkolne</h3>
+              <p class="dzialania__item-text">
+                Wchodzimy do szkół z warsztatami o aktywności fizycznej, zdrowym odżywianiu
+                i dbaniu o swoje ciało — w ciekawy, angażujący sposób.
+              </p>
+            </div>
+          </article>
+
+          <article class="dzialania__item reveal">
+            <div class="dzialania__item-bg dzialania__item-bg--teal"></div>
+            <div class="dzialania__item-content">
+              <span class="dzialania__item-emoji" aria-hidden="true">🌳</span>
+              <h3 class="dzialania__item-title">Aktywne świetlice</h3>
+              <p class="dzialania__item-text">
+                We współpracy ze świetlicami tworzymy stałe programy ruchowe dla dzieci
+                ze środowisk, które potrzebują wsparcia najbardziej.
+              </p>
+            </div>
+          </article>
+
+          <article class="dzialania__item reveal">
+            <div class="dzialania__item-bg dzialania__item-bg--navy"></div>
+            <div class="dzialania__item-content">
+              <span class="dzialania__item-emoji" aria-hidden="true">👨‍👩‍👧‍👦</span>
+              <h3 class="dzialania__item-title">Biegi rodzinne</h3>
+              <p class="dzialania__item-text">
+                Sport jako czas razem — nasze biegi rodzinne integrują całe rodziny,
+                budują wspomnienia i pokazują, że aktywność to frajda dla każdego wieku.
+              </p>
+            </div>
+          </article>
+
+          <article class="dzialania__item reveal">
+            <div class="dzialania__item-bg dzialania__item-bg--rose"></div>
+            <div class="dzialania__item-content">
+              <span class="dzialania__item-emoji" aria-hidden="true">📚</span>
+              <h3 class="dzialania__item-title">Edukacja zdrowotna</h3>
+              <p class="dzialania__item-text">
+                Publikujemy materiały edukacyjne, prowadzimy webinary i szkolenia
+                dla rodziców, nauczycieli i wychowawców na temat aktywnego stylu życia.
+              </p>
+            </div>
+          </article>
+
+          <article class="dzialania__item reveal">
+            <div class="dzialania__item-bg dzialania__item-bg--green"></div>
+            <div class="dzialania__item-content">
+              <span class="dzialania__item-emoji" aria-hidden="true">🤝</span>
+              <h3 class="dzialania__item-title">Partnerstwa</h3>
+              <p class="dzialania__item-text">
+                Budujemy sieć lokalnych partnerów — samorządów, firm i organizacji —
+                którzy wspólnie z nami tworzą aktywną Polskę dla dzieci.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         LICZBY / IMPACT
+    ============================================================ -->
+    <section class="section liczby" id="liczby" aria-labelledby="liczby-heading">
+      <div class="container">
+
+        <div class="section__header section__header--center">
+          <span class="section__tag section__tag--light">Nasze liczby</span>
+          <h2 class="section__heading section__heading--light" id="liczby-heading">
+            Razem robimy<br />prawdziwą różnicę
+          </h2>
+        </div>
+
+        <div class="liczby__grid">
+
+          <div class="liczby__item reveal">
+            <span class="liczby__number" data-target="12000" data-suffix="+">0</span>
+            <span class="liczby__label">dzieci objętych programami</span>
+          </div>
+
+          <div class="liczby__item reveal">
+            <span class="liczby__number" data-target="380" data-suffix="+">0</span>
+            <span class="liczby__label">zorganizowanych wydarzeń</span>
+          </div>
+
+          <div class="liczby__item reveal">
+            <span class="liczby__number" data-target="47" data-suffix="">0</span>
+            <span class="liczby__label">miast i miejscowości</span>
+          </div>
+
+          <div class="liczby__item reveal">
+            <span class="liczby__number" data-target="850" data-suffix="+">0</span>
+            <span class="liczby__label">wolontariuszy w Polsce</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         AKTUALNOŚCI
+    ============================================================ -->
+    <section class="section aktualnosci" id="aktualnosci" aria-labelledby="aktualnosci-heading">
+      <div class="container">
+
+        <div class="section__header section__header--split">
+          <div>
+            <span class="section__tag">Co słychać</span>
+            <h2 class="section__heading" id="aktualnosci-heading">Aktualności</h2>
+          </div>
+          <a href="#" class="btn btn--ghost btn--sm">Wszystkie aktualności</a>
+        </div>
+
+        <div class="aktualnosci__grid">
+
+          <article class="news-card reveal">
+            <div class="news-card__date-badge" aria-label="15 marca 2026">
+              <span class="news-card__day">15</span>
+              <span class="news-card__month">mar</span>
+            </div>
+            <div class="news-card__body">
+              <span class="news-card__tag">Wydarzenie</span>
+              <h3 class="news-card__title">
+                <a href="#">Wiosenny Bieg Rodzinny – Warszawa 2026</a>
+              </h3>
+              <p class="news-card__excerpt">
+                Zapraszamy na naszą flagową imprezę sezonu! Trasy dla każdego —
+                od maluchów po seniorów. Wspólna meta, wspólna radość.
+              </p>
+              <a href="#" class="news-card__link" aria-label="Czytaj więcej o Wiosennym Biegu Rodzinnym">
+                Czytaj więcej
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="news-card reveal">
+            <div class="news-card__date-badge news-card__date-badge--blue" aria-label="28 marca 2026">
+              <span class="news-card__day">28</span>
+              <span class="news-card__month">mar</span>
+            </div>
+            <div class="news-card__body">
+              <span class="news-card__tag news-card__tag--blue">Program</span>
+              <h3 class="news-card__title">
+                <a href="#">Ruszamy z nowym programem w szkołach podstawowych</a>
+              </h3>
+              <p class="news-card__excerpt">
+                Od kwietnia startujemy z pilotażowym programem edukacji ruchowej
+                w 15 szkołach podstawowych w trzech województwach.
+              </p>
+              <a href="#" class="news-card__link" aria-label="Czytaj więcej o programie szkolnym">
+                Czytaj więcej
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="news-card reveal">
+            <div class="news-card__date-badge news-card__date-badge--teal" aria-label="5 kwietnia 2026">
+              <span class="news-card__day">05</span>
+              <span class="news-card__month">kwi</span>
+            </div>
+            <div class="news-card__body">
+              <span class="news-card__tag news-card__tag--teal">Warsztaty</span>
+              <h3 class="news-card__title">
+                <a href="#">Warsztaty dla wolontariuszy – bezpłatne zapisy!</a>
+              </h3>
+              <p class="news-card__excerpt">
+                Chcesz zostać instruktorem w naszych programach? Zapraszamy na bezpłatne
+                warsztaty dla przyszłych wolontariuszy Fundacji Biegusiem.
+              </p>
+              <a href="#" class="news-card__link" aria-label="Czytaj więcej o warsztatach">
+                Czytaj więcej
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WESPRZYJ NAS (CTA)
+    ============================================================ -->
+    <section class="section wesprzej" id="wesprzej" aria-labelledby="wesprzej-heading">
+      <div class="container">
+
+        <div class="wesprzej__layout">
+
+          <!-- Lewa strona: tekst -->
+          <div class="wesprzej__content reveal">
+            <span class="section__tag section__tag--dark">Wesprzyj nas</span>
+            <h2 class="section__heading section__heading--dark" id="wesprzej-heading">
+              Twoja pomoc<br />zmienia świat
+            </h2>
+            <p class="wesprzej__text">
+              Każda złotówka, którą przekazujesz, trafia bezpośrednio do dzieci —
+              na sprzęt sportowy, organizację wydarzeń i programy edukacyjne.
+              Działamy transparentnie i z pasją.
+            </p>
+
+            <div class="wesprzej__amounts">
+              <button class="amount-btn" data-amount="20">20 zł</button>
+              <button class="amount-btn amount-btn--active" data-amount="50">50 zł</button>
+              <button class="amount-btn" data-amount="100">100 zł</button>
+              <button class="amount-btn" data-amount="custom">Inna kwota</button>
+            </div>
+
+            <div class="wesprzej__actions">
+              <a href="#" class="btn btn--primary">Przekaż darowiznę</a>
+              <a href="#" class="btn btn--outline-dark">1% podatku</a>
+            </div>
+
+            <p class="wesprzej__note">
+              🔒 Bezpieczna płatność &nbsp;·&nbsp; KRS: 0000000000 &nbsp;·&nbsp; Fundacja Biegusiem
+            </p>
+          </div>
+
+          <!-- Prawa strona: dlaczego warto -->
+          <div class="wesprzej__reasons reveal">
+            <h3 class="wesprzej__reasons-title">Jak działa Twoja pomoc?</h3>
+
+            <div class="wesprzej__reason">
+              <div class="wesprzej__reason-icon" aria-hidden="true">
+                <span>20 zł</span>
+              </div>
+              <div>
+                <strong>funduje sprzęt</strong> do ćwiczeń dla jednego dziecka na miesiąc
+              </div>
+            </div>
+
+            <div class="wesprzej__reason">
+              <div class="wesprzej__reason-icon wesprzej__reason-icon--blue" aria-hidden="true">
+                <span>50 zł</span>
+              </div>
+              <div>
+                <strong>pokrywa koszt warsztatu</strong> dla grupy 5 dzieci ze świetlicy
+              </div>
+            </div>
+
+            <div class="wesprzej__reason">
+              <div class="wesprzej__reason-icon wesprzej__reason-icon--teal" aria-hidden="true">
+                <span>100 zł</span>
+              </div>
+              <div>
+                <strong>finansuje start dziecka</strong> w rodzinnym biegu z opłatą wpisową
+              </div>
+            </div>
+
+            <div class="wesprzej__reason">
+              <div class="wesprzej__reason-icon wesprzej__reason-icon--navy" aria-hidden="true">
+                <span>♥</span>
+              </div>
+              <div>
+                <strong>Twoje imię</strong> pojawi się w galerii darczyńców fundacji
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         KONTAKT
+    ============================================================ -->
+    <section class="section kontakt" id="kontakt" aria-labelledby="kontakt-heading">
+      <div class="container">
+
+        <div class="section__header section__header--center">
+          <span class="section__tag">Kontakt</span>
+          <h2 class="section__heading" id="kontakt-heading">Napisz do nas</h2>
+          <p class="section__lead">
+            Masz pytanie, pomysł na współpracę lub chcesz dołączyć jako wolontariusz?
+            Chętnie porozmawiamy!
+          </p>
+        </div>
+
+        <div class="kontakt__layout">
+
+          <!-- Formularz -->
+          <form class="kontakt__form reveal" action="#" method="POST" novalidate aria-label="Formularz kontaktowy">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Imię i nazwisko *</label>
+              <input
+                class="form-input"
+                type="text"
+                id="contact-name"
+                name="name"
+                placeholder="Jan Kowalski"
+                required
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Adres e-mail *</label>
+              <input
+                class="form-input"
+                type="email"
+                id="contact-email"
+                name="email"
+                placeholder="jan@przykład.pl"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-subject">Temat</label>
+              <select class="form-input form-select" id="contact-subject" name="subject">
+                <option value="">Wybierz temat...</option>
+                <option value="wolontariat">Chcę zostać wolontariuszem</option>
+                <option value="wspolpraca">Propozycja współpracy</option>
+                <option value="darowizna">Pytanie o darowiznę</option>
+                <option value="media">Media / prasa</option>
+                <option value="inne">Inne</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Wiadomość *</label>
+              <textarea
+                class="form-input form-textarea"
+                id="contact-message"
+                name="message"
+                placeholder="Czym mogę Ci pomóc?"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full">
+              Wyślij wiadomość
+            </button>
+          </form>
+
+          <!-- Dane kontaktowe -->
+          <address class="kontakt__info reveal" aria-label="Dane kontaktowe">
+
+            <div class="kontakt__detail">
+              <div class="kontakt__detail-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <strong>E-mail</strong>
+                <a href="mailto:kontakt@biegusiem.pl">kontakt@biegusiem.pl</a>
+              </div>
+            </div>
+
+            <div class="kontakt__detail">
+              <div class="kontakt__detail-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2.67h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Telefon</strong>
+                <a href="tel:+48000000000">+48 000 000 000</a>
+              </div>
+            </div>
+
+            <div class="kontakt__detail">
+              <div class="kontakt__detail-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Siedziba</strong>
+                <span>ul. Sportowa 1, 00-000 Warszawa</span>
+              </div>
+            </div>
+
+            <div class="kontakt__social">
+              <strong>Znajdź nas</strong>
+              <div class="kontakt__social-links">
+                <a href="#" class="social-btn" aria-label="Facebook Fundacji Biegusiem">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                  </svg>
+                  Facebook
+                </a>
+                <a href="#" class="social-btn" aria-label="Instagram Fundacji Biegusiem">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                  Instagram
+                </a>
+              </div>
+            </div>
+
+          </address>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__top">
+
+        <div class="footer__brand">
+          <a href="#hero" aria-label="Fundacja Biegusiem – powrót na górę">
+            <img
+              src="Pełna księga znaku Fundacja Biegusiem/Pliki/PNG/Wersja podstawowa dla ciemnego tła.png"
+              alt="Fundacja Biegusiem"
+              class="footer__logo"
+              width="160"
+            />
+          </a>
+          <p class="footer__tagline">Razem w ruchu!</p>
+          <p class="footer__krs">KRS: 0000000000 &nbsp;·&nbsp; NIP: 000-000-00-00</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Nawigacja stopki">
+          <div class="footer__col">
+            <h4 class="footer__col-title">Fundacja</h4>
+            <ul role="list">
+              <li><a href="#o-nas">O nas</a></li>
+              <li><a href="#misja">Misja</a></li>
+              <li><a href="#dzialania">Działania</a></li>
+              <li><a href="#liczby">Wyniki</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Wesprzyj</h4>
+            <ul role="list">
+              <li><a href="#wesprzej">Darowizna</a></li>
+              <li><a href="#wesprzej">1% podatku</a></li>
+              <li><a href="#">Wolontariat</a></li>
+              <li><a href="#">Współpraca</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Informacje</h4>
+            <ul role="list">
+              <li><a href="#aktualnosci">Aktualności</a></li>
+              <li><a href="#">Sprawozdania</a></li>
+              <li><a href="#">Polityka prywatności</a></li>
+              <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Fundacja Biegusiem. Wszelkie prawa zastrzeżone.</p>
+        <p>Strona wykonana z <span aria-label="sercem">♥</span> dla aktywnej Polski</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scroll-top" aria-label="Przewiń na górę" hidden>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
