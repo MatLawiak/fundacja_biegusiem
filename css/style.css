@@ -281,8 +281,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav__logo-img {
-  height: 44px;
+  height: 42px;
   width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  display: block;
   transition: opacity var(--dur-fast);
 }
 
