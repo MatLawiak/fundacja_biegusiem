@@ -1488,3 +1488,146 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skip-link:focus { top: 0; }
+
+/* ----------------------------------------------------------------
+   20. DZIAŁANIA — link i social buttons (nowe)
+   ---------------------------------------------------------------- */
+.dzialania__item-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--color-prancing-pony);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: opacity var(--dur-fast);
+}
+.dzialania__item-link:hover { opacity: 0.7; }
+
+.dzialania__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.dzialania__social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  background: var(--color-soft-rose);
+  color: var(--color-beetroot);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--dur-fast), color var(--dur-fast);
+}
+.dzialania__social-btn:hover {
+  background: var(--color-prancing-pony);
+  color: var(--color-white);
+}
+
+/* ----------------------------------------------------------------
+   21. KONTAKT — multi-line dane rejestrowe
+   ---------------------------------------------------------------- */
+.kontakt__detail div span {
+  display: block;
+  color: var(--color-gray-text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ----------------------------------------------------------------
+   22. SEKCJA 1,5% PODATKU
+   ---------------------------------------------------------------- */
+.podatek {
+  background: linear-gradient(135deg, var(--color-soft-rose) 0%, #EBF7F8 100%);
+}
+
+.podatek__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .podatek__layout { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+.podatek__text {
+  color: var(--color-gray-text);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.podatek__krs-box {
+  background: var(--color-white);
+  border: 2px solid var(--color-blushed);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.podatek__krs-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--color-soft-rose);
+}
+.podatek__krs-row:last-child { border-bottom: none; }
+
+.podatek__krs-label {
+  color: var(--color-gray-text);
+  font-size: 0.85rem;
+}
+.podatek__krs-value {
+  color: var(--color-black);
+  font-size: 1rem;
+}
+
+.podatek__note {
+  font-size: 0.85rem;
+  color: var(--color-gray-text);
+  line-height: 1.6;
+}
+
+.podatek__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.podatek__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: var(--color-prancing-pony);
+  color: var(--color-white);
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(221, 44, 136, 0.3);
+}
+
+.podatek__badge-percent {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.podatek__badge-label {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-top: 0.25rem;
+}
+.podatek__badge-arrow {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  background: rgba(255,255,255,0.2);
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--radius-full);
+}
