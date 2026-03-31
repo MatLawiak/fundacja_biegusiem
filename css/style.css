@@ -276,14 +276,14 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 88px;
   gap: var(--space-md);
 }
 
 .nav__logo-img {
-  height: 56px;
+  height: 64px;
   width: auto;
-  max-width: 220px;
+  max-width: 240px;
   object-fit: contain;
   display: block;
   transition: opacity var(--dur-fast);
@@ -479,15 +479,56 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-.hero__logo-wrap {
-  position: relative;
+.hero__logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
   animation: heroLogoEntrance 0.8s var(--ease-bounce) 0.3s both;
 }
 
 .hero__logo-img {
-  width: min(340px, 80%);
+  width: min(260px, 75%);
   height: auto;
-  filter: drop-shadow(0 20px 40px rgba(221, 44, 136, .18));
+  filter: drop-shadow(0 16px 32px rgba(221, 44, 136, .18));
+}
+
+.hero__logos-divider {
+  width: 48px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(to right, var(--color-prancing-pony), var(--color-fairy));
+  opacity: 0.5;
+}
+
+.hero__partner-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  transition: transform var(--dur-normal) var(--ease-bounce),
+              filter var(--dur-normal);
+}
+
+.hero__partner-link:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.05);
+}
+
+.hero__partner-label {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gray-text);
+}
+
+.hero__partner-img {
+  width: min(220px, 65%);
+  height: auto;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,.1));
 }
 
 @keyframes heroLogoEntrance {
