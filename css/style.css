@@ -1631,3 +1631,324 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.2rem 0.7rem;
   border-radius: var(--radius-full);
 }
+
+
+/* ----------------------------------------------------------------
+   MISJA — nowe elementy (statystyki, lista, subtitle)
+   ---------------------------------------------------------------- */
+.misja__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+  text-align: center;
+}
+
+.misja__stat {
+  background: var(--color-soft-rose);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg) var(--space-md);
+}
+
+.misja__stat-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--color-prancing-pony);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.misja__stat-label {
+  font-size: var(--size-body-sm);
+  color: var(--color-gray-text);
+  line-height: 1.4;
+}
+
+.misja__subtitle {
+  font-size: var(--size-h4);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  margin-top: var(--space-lg);
+  color: var(--color-black);
+}
+
+.misja__subtitle:first-child { margin-top: 0; }
+
+.misja__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: var(--space-lg);
+}
+
+.misja__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: var(--size-body);
+  color: var(--color-gray-text);
+  line-height: 1.6;
+}
+
+.misja__list-icon { flex-shrink: 0; font-size: 1.1rem; }
+
+.misja__list a {
+  color: var(--color-prancing-pony);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ----------------------------------------------------------------
+   DZIAŁANIA — nowe elementy (featured, social pills, link)
+   ---------------------------------------------------------------- */
+.dzialania__item--featured {
+  grid-column: span 2;
+}
+
+@media (max-width: 700px) {
+  .dzialania__item--featured { grid-column: span 1; }
+}
+
+.dzialania__item-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-prancing-pony);
+  margin-top: var(--space-sm);
+  transition: gap var(--dur-fast);
+}
+
+.dzialania__item-link:hover { gap: 0.5rem; }
+
+.dzialania__social {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: var(--space-sm);
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: transform var(--dur-fast) var(--ease-bounce),
+              box-shadow var(--dur-fast);
+}
+
+.social-pill:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+
+.social-pill--fb {
+  background: #1877F2;
+  color: #fff;
+}
+
+.social-pill--ig {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+}
+
+/* ----------------------------------------------------------------
+   1,5% PODATKU — sekcja
+   ---------------------------------------------------------------- */
+.podatek {
+  background: linear-gradient(135deg, var(--color-bravery) 0%, #1a2066 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.podatek::before {
+  content: '';
+  position: absolute;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: rgba(176,220,225,.12);
+  top: -200px; right: -100px;
+}
+
+.podatek__layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.podatek__text {
+  font-size: var(--size-body-lg);
+  color: rgba(255,255,255,.75);
+  margin-bottom: var(--space-md);
+  line-height: 1.65;
+}
+
+.podatek__box {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg);
+  backdrop-filter: blur(8px);
+}
+
+.podatek__krs-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: var(--space-md);
+}
+
+.podatek__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+}
+
+.podatek__value {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.1;
+}
+
+.podatek__value--sm { font-size: 1.4rem; }
+
+.podatek__sub {
+  font-size: var(--size-body-sm);
+  color: rgba(255,255,255,.5);
+}
+
+.podatek__divider {
+  height: 1px;
+  background: rgba(255,255,255,.15);
+  margin-bottom: var(--space-md);
+}
+
+.podatek__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.podatek__step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: var(--size-body-sm);
+  color: rgba(255,255,255,.75);
+  line-height: 1.5;
+}
+
+.podatek__step span {
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--color-prancing-pony);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.podatek__step strong { color: var(--color-white); }
+
+/* ----------------------------------------------------------------
+   WESPRZYJ — numer konta bankowego
+   ---------------------------------------------------------------- */
+.wesprzej__bank {
+  background: var(--color-white);
+  border: 2px solid var(--color-blushed);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.wesprzej__bank-label {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gray-text);
+  margin-bottom: 0.4rem;
+}
+
+.wesprzej__bank-name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-black);
+}
+
+.wesprzej__bank-account {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-prancing-pony);
+  letter-spacing: 0.04em;
+  margin: 0.25rem 0;
+}
+
+.wesprzej__bank-title {
+  font-size: var(--size-body-sm);
+  color: var(--color-gray-text);
+}
+
+.wesprzej__bank-title em { color: var(--color-black); font-style: normal; font-weight: 600; }
+
+/* ----------------------------------------------------------------
+   KONTAKT — tabela KRS
+   ---------------------------------------------------------------- */
+.kontakt__krs-box {
+  background: var(--color-soft-rose);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+}
+
+.kontakt__krs-title {
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gray-text);
+  margin-bottom: var(--space-sm);
+}
+
+.kontakt__krs-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(221,44,136,.1);
+  font-size: var(--size-body-sm);
+}
+
+.kontakt__krs-row:last-child { border-bottom: none; }
+.kontakt__krs-row span { color: var(--color-gray-text); }
+.kontakt__krs-row strong { color: var(--color-black); font-weight: 600; }
+
+/* ----------------------------------------------------------------
+   RESPONSIVE — podatek
+   ---------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .podatek__layout { grid-template-columns: 1fr; }
+  .misja__stats { grid-template-columns: 1fr; }
+}
