@@ -260,12 +260,19 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 900;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  transition: box-shadow var(--dur-normal) var(--ease-smooth);
+}
+
+/* backdrop-filter na ::before żeby nie tworzyć containing block dla fixed dzieci */
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,0,0,.06);
-  transition: box-shadow var(--dur-normal) var(--ease-smooth),
-              background var(--dur-normal) var(--ease-smooth);
+  z-index: -1;
 }
 
 .site-header.is-scrolled {
