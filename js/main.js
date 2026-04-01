@@ -32,15 +32,22 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll(); // Initial check
 
+  /* Backdrop overlay */
+  const backdrop = document.createElement('div');
+  backdrop.className = 'nav__backdrop';
+  document.body.appendChild(backdrop);
+
   /* Mobile toggle */
   const openMenu = () => {
     menu.classList.add('is-open');
+    backdrop.classList.add('is-visible');
     toggle.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   };
 
   const closeMenu = () => {
     menu.classList.remove('is-open');
+    backdrop.classList.remove('is-visible');
     toggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   };
@@ -49,6 +56,9 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     const isOpen = menu.classList.contains('is-open');
     isOpen ? closeMenu() : openMenu();
   });
+
+  /* Kliknięcie w backdrop zamyka menu */
+  backdrop.addEventListener('click', closeMenu);
 
   /* Close on nav link click */
   navLinks.forEach(link => {
@@ -59,7 +69,8 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   document.addEventListener('click', (e) => {
     if (menu.classList.contains('is-open') &&
         !menu.contains(e.target) &&
-        !toggle.contains(e.target)) {
+        !toggle.contains(e.target) &&
+        !backdrop.contains(e.target)) {
       closeMenu();
     }
   });
@@ -268,7 +279,6 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
     /* Simulate send (replace with real fetch/API call) */
     const submitBtn = form.querySelector('[type="submit"]');
-    const originalText = submitBtn.textContent;
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Wysyłanie…';

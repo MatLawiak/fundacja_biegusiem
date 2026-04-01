@@ -1426,6 +1426,20 @@ h1, h2, h3, h4, h5, h6 {
 
   .nav__menu.is-open { transform: translateX(0); }
 
+  .nav__backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 940;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease;
+  }
+  .nav__backdrop.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .nav__link {
     padding: 0.9rem 1rem;
     border-radius: var(--radius-md);
@@ -2078,15 +2092,3 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.8;
 }
 
-/* ----------------------------------------------------------------
-   MOBILE — hamburger overlay backdrop
-   ---------------------------------------------------------------- */
-@media (max-width: 900px) {
-  .nav__menu.is-open::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.4);
-    z-index: -1;
-  }
-}
