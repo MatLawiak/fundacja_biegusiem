@@ -276,17 +276,28 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 88px;
+  height: 100px;
   gap: var(--space-md);
 }
 
 .nav__logo-img {
-  height: 64px;
-  width: auto;
-  max-width: 240px;
+  width: 280px;
+  height: 280px;
   object-fit: contain;
   display: block;
+  /* Obraz 11812×11812 z logo w centrum — clip przez overflow:hidden */
+  transform: translateY(-95px);
+  flex-shrink: 0;
   transition: opacity var(--dur-fast);
+}
+
+.nav__logo {
+  overflow: hidden;
+  height: 88px;
+  width: 280px;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
 }
 
 .nav__logo:hover .nav__logo-img { opacity: 0.85; }
@@ -1403,12 +1414,14 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    background: var(--color-white);
+    background: #ffffff;
     padding: 6rem 2rem 2rem;
-    box-shadow: -8px 0 32px rgba(0,0,0,.12);
+    box-shadow: -8px 0 32px rgba(0,0,0,.18);
     transform: translateX(100%);
     transition: transform var(--dur-slow) var(--ease-smooth);
-    z-index: 800;
+    z-index: 950;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav__menu.is-open { transform: translateX(0); }
@@ -1992,4 +2005,88 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 900px) {
   .podatek__layout { grid-template-columns: 1fr; }
   .misja__stats { grid-template-columns: 1fr; }
+}
+
+
+/* ----------------------------------------------------------------
+   HERO — bez logo Biegusiem, tylko logo Jesiennego Biegu
+   ---------------------------------------------------------------- */
+.hero__partner-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: transform var(--dur-normal) var(--ease-bounce),
+              filter var(--dur-normal);
+  animation: heroLogoEntrance 0.8s var(--ease-bounce) 0.3s both;
+}
+
+.hero__partner-link:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.05);
+}
+
+.hero__partner-label {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gray-text);
+}
+
+.hero__partner-img {
+  width: min(320px, 80%);
+  height: auto;
+  filter: drop-shadow(0 12px 28px rgba(0,0,0,.12));
+}
+
+/* ----------------------------------------------------------------
+   FOOTER — Powered by Twisted Pixel
+   ---------------------------------------------------------------- */
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.footer__powered {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  opacity: 0.55;
+  transition: opacity var(--dur-fast);
+}
+
+.footer__powered:hover { opacity: 1; }
+
+.footer__powered span {
+  font-size: var(--size-body-sm);
+  color: rgba(255,255,255,.6);
+  white-space: nowrap;
+}
+
+.footer__powered-logo {
+  height: 22px;
+  width: auto;
+  /* Logo Twisted Pixel jest białe, więc odwracamy jeśli jest ciemne */
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+/* ----------------------------------------------------------------
+   MOBILE — hamburger overlay backdrop
+   ---------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .nav__menu.is-open::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.4);
+    z-index: -1;
+  }
 }
