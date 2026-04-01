@@ -657,78 +657,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .misja__text strong { color: var(--color-black); }
 
-/* Visual */
-.misja__blob {
-  position: relative;
+/* Feature list (zastepuje blob z tagami) */
+.misja__features {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--color-soft-rose) 0%, #EBF7F8 100%);
+  border-radius: var(--radius-xl);
 }
 
-.misja__blob-inner {
-  width: clamp(220px, 35vw, 380px);
-  height: clamp(220px, 35vw, 380px);
-  border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
-  background: linear-gradient(135deg, var(--color-soft-rose) 0%, var(--color-fairy) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: morphBlob 10s ease-in-out infinite;
-}
-
-@keyframes morphBlob {
-  0%, 100% { border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%; }
-  33%       { border-radius: 40% 60% 45% 55% / 55% 40% 60% 45%; }
-  66%       { border-radius: 55% 45% 60% 40% / 40% 60% 45% 55%; }
-}
-
-.misja__sygnet {
-  width: 55%;
-  height: auto;
-}
-
-/* Floating tags */
-.misja__tag {
-  position: absolute;
-  font-family: var(--font-heading);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-full);
-  box-shadow: var(--shadow-sm);
-  white-space: nowrap;
-  animation: floatTag 4s ease-in-out infinite;
-}
-
-.misja__tag--1 {
-  top: 5%;
-  right: 0;
+.misja__feature {
   background: var(--color-white);
-  color: var(--color-prancing-pony);
-  border: 1.5px solid var(--color-blushed);
-  animation-delay: 0s;
-}
-
-.misja__tag--2 {
-  bottom: 15%;
-  right: -2%;
-  background: var(--color-bravery);
-  color: var(--color-white);
-  animation-delay: 1.3s;
-}
-
-.misja__tag--3 {
-  bottom: 0%;
-  left: 0;
-  background: var(--color-herbal-tea);
-  color: var(--color-mermaid);
-  border: 1.5px solid var(--color-mermaid);
-  animation-delay: 2.6s;
-}
-
-@keyframes floatTag {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-8px); }
+  padding: 0.75rem 1.1rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  line-height: 1.4;
 }
 
 
