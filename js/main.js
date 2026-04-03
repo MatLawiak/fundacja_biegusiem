@@ -32,7 +32,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll(); // Initial check
 
-  /* Backdrop overlay */
+  /* Backdrop overlay — wewnątrz headera, żeby być w tym samym stacking context co nav__menu */
   const backdrop = document.createElement('div');
   backdrop.className = 'nav__backdrop';
   document.body.appendChild(backdrop);
@@ -57,8 +57,9 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     isOpen ? closeMenu() : openMenu();
   });
 
-  /* Kliknięcie w backdrop zamyka menu */
+  /* Kliknięcie w backdrop zamyka menu (+ touchstart dla iOS Safari) */
   backdrop.addEventListener('click', closeMenu);
+  backdrop.addEventListener('touchstart', closeMenu, { passive: true });
 
   /* Close on nav link click */
   navLinks.forEach(link => {

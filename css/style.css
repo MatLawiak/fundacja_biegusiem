@@ -86,7 +86,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
+  scroll-padding-top: 100px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -259,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
 .site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 900;
+  z-index: 1000;
   border-bottom: 1px solid rgba(0,0,0,.06);
   transition: box-shadow var(--dur-normal) var(--ease-smooth);
 }
@@ -385,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   background: var(--color-white);
   overflow: hidden;
-  padding-top: 80px; /* header height */
+  padding-top: 100px; /* header height */
 }
 
 /* Decorative background circles (inspired by brand sygnet) */
@@ -1391,10 +1391,13 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     bottom: 0;
     background: rgba(0,0,0,0.45);
-    z-index: 905;
+    z-index: 950; /* poniżej site-header (1000) + nav__menu, powyżej treści strony */
     opacity: 0;
     pointer-events: none;
     transition: opacity 300ms ease;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
   .nav__backdrop.is-visible {
     opacity: 1;
@@ -1454,8 +1457,27 @@ h1, h2, h3, h4, h5, h6 {
 
   .section { padding-block: var(--space-2xl); }
 
+  /* Nav logo — mniejszy na mobile */
+  .nav__logo {
+    width: 180px;
+    height: 72px;
+  }
+  .nav__logo-img {
+    width: 180px;
+    height: 180px;
+    transform: translateY(-60px);
+  }
+
   /* Hero */
-  .hero { min-height: 100svh; }
+  .hero {
+    min-height: auto;
+    padding-bottom: var(--space-xl);
+  }
+
+  .hero__content {
+    gap: var(--space-lg);
+    padding-block: var(--space-lg);
+  }
 
   .hero__heading { font-size: clamp(2.2rem, 9vw, 3rem); }
 
