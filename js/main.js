@@ -32,10 +32,30 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll(); // Initial check
 
-  /* Backdrop overlay — w body (z-index:99), poniżej site-headera (z-index:1000) */
+  /* Backdrop overlay — w body, z-index:999 */
   const backdrop = document.createElement('div');
   backdrop.className = 'nav__backdrop';
   document.body.appendChild(backdrop);
+
+  /*
+   * Przenosimy nav__menu do <body> na mobile — wszystkie trzy elementy
+   * (site-header 1000, backdrop 999, nav__menu 1010) trafiają wtedy
+   * do root stacking context, eliminując konflikty z-index.
+   * Na desktop menu wraca do oryginalnego rodzica (nav.container).
+   */
+  const navContainer = menu.parentElement;
+  const BREAKPOINT   = 900;
+
+  const syncMenuPlacement = () => {
+    if (window.innerWidth <= BREAKPOINT) {
+      if (menu.parentElement !== document.body) document.body.appendChild(menu);
+    } else {
+      if (menu.parentElement !== navContainer) navContainer.appendChild(menu);
+    }
+  };
+
+  syncMenuPlacement();
+  window.addEventListener('resize', syncMenuPlacement, { passive: true });
 
   /* Mobile toggle */
   const openMenu = () => {
