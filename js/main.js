@@ -32,7 +32,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll(); // Initial check
 
-  /* Backdrop overlay — wewnątrz headera, żeby być w tym samym stacking context co nav__menu */
+  /* Backdrop overlay — w body (z-index:99), poniżej site-headera (z-index:1000) */
   const backdrop = document.createElement('div');
   backdrop.className = 'nav__backdrop';
   document.body.appendChild(backdrop);

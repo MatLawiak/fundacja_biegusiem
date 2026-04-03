@@ -1362,39 +1362,47 @@ h1, h2, h3, h4, h5, h6 {
   /* Nav */
   .nav__toggle { display: flex; }
 
+  /*
+   * Menu: position:absolute wewnątrz position:fixed site-headera.
+   * Dzięki temu menu jest w stacking context headera (z-index:1000),
+   * a backdrop w body (z-index:99) — nigdy nie zakryje menu.
+   */
   .nav__menu {
-    position: fixed;
-    top: 100px;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    bottom: 0;
-    width: 100%;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
     background: #ffffff;
     padding: 0.5rem 1.5rem 2rem;
     box-shadow: 0 8px 32px rgba(0,0,0,.18);
-    transform: translateY(-110%);
-    transition: transform var(--dur-slow) var(--ease-smooth);
-    z-index: 910;
+    max-height: calc(100dvh - 100px);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-  }
-
-  .nav__menu.is-open { transform: translateY(0); }
-
-  .nav__backdrop {
-    position: fixed;
-    top: 100px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.45);
-    z-index: 950; /* poniżej site-header (1000) + nav__menu, powyżej treści strony */
+    /* stan ukryty */
     opacity: 0;
     pointer-events: none;
-    transition: opacity 300ms ease;
+    transform: translateY(-6px);
+    transition: opacity 220ms ease, transform 220ms ease;
+  }
+
+  .nav__menu.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  /* Backdrop: w body, poniżej site-headera (1000) */
+  .nav__backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms ease;
     cursor: pointer;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
